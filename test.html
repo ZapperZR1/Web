@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!-- generator meta tag -->
+    <!-- leave this for stats and Silex version check -->
+    <meta name="generator" content="Silex v2.2.6">
+    <!-- End of generator meta tag -->
+    <link data-silex-static="" href="//editor.silex.me/static/2.6/normalize.css" rel="stylesheet">
+    <link data-silex-static="" href="//editor.silex.me/static/2.6/front-end.css" rel="stylesheet">
+    <script data-silex-static="" type="text/javascript" src="//editor.silex.me/static/2.6/jquery.js"></script>
+    <script data-silex-static="" type="text/javascript" src="//editor.silex.me/static/2.6/jquery-ui.js"></script>
+    <script data-silex-static="" type="text/javascript" src="//editor.silex.me/static/2.6/pageable.js"></script>
+    <script data-silex-static="" type="text/javascript" src="//editor.silex.me/static/2.6/front-end.js"></script>
+
+    <style type="text/css" class="silex-style">
+        <style type="text/css">
+            body
+            {
+            margin: 0px 0px 0px 0px;
+            padding: 0px 0px 0px 0px;
+            }
+            .print_page_container
+            {
+            font-size: 13px;
+            width: 100%;
+            font-family: Candara,Calibri,Segoe,Segoe UI,Optima,Arial,sans-serif;
+            text-align: left;
+            }
+            .section
+            {
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 0 0;
+            border-collapse: collapse;
+            border-spacing: 0;
+            /*page-break-inside: avoid;*/
+            }
+            .leftbox, .rightbox
+            {
+            width: 48%;
+            background-color: #F3F3F3;
+            }
+            .middlebox
+            {
+            width: 4%;
+            }
+            .customer_section, .contact_section
+            {
+            width: 100%;
+            border: 0px solid #CCCCCC;
+            border-collapse: collapse;
+            border-spacing: 0;
+            }
+            .print_heading, .ticket_heading, .mycompany_heading
+            {
+            text-align: left;
+            font-weight: bold;
+            color: #000000;
+            background-color: #CCCCCC;
+            border-collapse: collapse;
+            border-spacing: 0;
+            border-bottom: 0px;
+            border-top: 1px solid #CCCCCC;
+            border-left: 1px solid #CCCCCC;
+            border-right: 1px solid #CCCCCC;
+            padding: 3px 3px;
+            }
+            .customer_body
+            {
+            padding: 3px 3px;
+            }
+            .amountdue_section
+            {
+            text-align: right;
+            border: 2px solid #CCCCCC;
+            border-collapse: collapse;
+            border-spacing: 0;
+            }
+            .ticket_section, .item_section, .asset_section, .appointment_section
+            {
+            width: 100%;
+            text-align: left;
+            border: 0px solid #CCCCCC;
+            border-collapse: collapse;
+            border-spacing: 0;
+            }
+            .customer_label
+            {
+            display:none;
+            text-align: left;
+            font-weight: bold;
+            color: #000000;
+            background-color: #FFFFFF;
+            vertical-align: top;
+            white-space: nowrap;
+            }
+            .ticket_label, .ticket_label2, .wolabel, .amountdue_label, .asset_label
+            {
+            text-align: left;
+            vertical-align: top;
+            font-weight: bold;
+            color: #000000;
+            background-color: #FFFFFF;
+            white-space: nowrap;
+            border: 1px solid #CCCCCC;
+            border-collapse: collapse;
+            border-spacing: 0;
+            padding: 2px 2px;
+            }
+            .ticket_text, .ticket_text2, .wotext, .wotext_number, .amountdue_text, .asset_text
+            {
+            text-align: left;
+            vertical-align: top;
+            color: #000000;
+            background-color: #FFFFFF;
+            border: 1px solid #CCCCCC;
+            border-collapse: collapse;
+            border-spacing: 0;
+            padding: 2px 2px;
+            }
+            .ticket_label, .ticket_label2
+            {
+            width: 10%;
+            }
+            .ticket_text, .ticket_text2
+            {
+            width: 40%;
+            }
+            .customer_label
+            {
+            width: 10%;
+            margin-left: 10px;
+            }
+            .customer_text
+            {
+            width: 40%;
+            }
+            .asset_label
+            {
+            width: 20%;
+            }
+            .asset_text
+            {
+            width: 80%;
+            }
+            .wotext_number
+            {
+            text-align: right;
+            white-space: nowrap;
+            }
+            .wotext, .wotext_number
+            {
+            padding-top: 3px;
+            padding-bottom: 3px;
+            padding-left: 3px;
+            padding-right: 3px;
+            }
+            .my_company_info
+            {
+            font-weight: bold;
+            color: #000000;
+            background-color: #FFFFFF;
+            }
+            .customer_section, .customer_label, .customer_text, .contact_section, .wolabel
+            {
+            text-align: left;
+            background-color: #F3F3F3;
+            }
+            .amountdue_label
+            {
+            text-align: right;
+            }
+            .ticket_info
+            {
+            font-family: "Arial Rounded MT Bold";
+            color: #DDDDDD;
+            text-align: center;
+            }
+            .largeHeader
+            {
+            }
+            .subtotal_label
+            {
+            font-family: Arial;
+            font-weight: bold;
+            text-align: right;
+            white-space: nowrap;
+            }
+            .subtotal_text
+            {
+            border-bottom: solid 1px #999999;
+            text-align: right;
+            }
+            .signature
+            {
+            width: 216px;
+            page-break-inside: avoid;
+            }
+            .my_company_logo img
+            {
+            height: auto;
+            width: auto;
+            }
+            #item td{
+            border: none;
+            background-color: #f1f1f2;
+            }
+            #item tr:first-child td{
+            background-color: #f1f1f2;
+            border:none;
+            border-bottom: 1px solid #000000;
+            }
+            .grey{
+            }
+            .item_approved {display: none;}
+            .item_tax {display: none;}
+            .item_name {display: none;}
+    </style>
+    </style>
+    <script type="text/javascript" class="silex-script"></script>
+    <style class="silex-inline-styles" type="text/css">
+        .body-initial {
+            background-color: rgb(38, 38, 38); 
+        }
+        .silex-id-1474394621033-3 {
+            min-height: 600px; 
+            top: 5px; 
+            left: 0px; 
+        }
+        .silex-id-1474394621032-2 {
+            min-height: 100px; 
+            background-color: rgb(255, 255, 255); 
+        }
+        .silex-id-1474394605264-1 {
+            min-height: 100px; 
+            width: 100px; 
+            top: 100px; 
+            left: 100px; 
+        }
+        .silex-id-1474394605263-0 {
+            min-height: 100px; 
+            background-color: transparent; 
+        }
+        .silex-id-1442914737143-3 {
+            min-height: 36px; 
+            width: 960px; 
+            top: 37px; 
+            left: 1px; 
+        }
+    </style>
+    <title></title>
+    <script type="text/javascript" class="silex-json-styles">
+        [{"desktop":{"body-initial":{"background-color":"rgb(38, 38, 38)"},"silex-id-1474394621033-3":{"min-height":"600px","top":"5px","left":"0px"},"silex-id-1474394621032-2":{"min-height":"100px","background-color":"rgb(255, 255, 255)"},"silex-id-1474394605264-1":{"min-height":"100px","width":"100px","top":"100px","left":"100px"},"silex-id-1474394605263-0":{"min-height":"100px","background-color":"transparent"},"silex-id-1442914737143-3":{"min-height":"36px","width":"960px","top":"37px","left":"1px"}},"mobile":{}}]
+    </script>
+    <style id="current-page-style">
+        .page-page-1{display:inherit; }
+    </style>
+    <!-- Silex HEAD tag do not remove -->
+    <div class="print_page_container">
+        <table width="1193" height="39" class="section">
+            <tbody>
+                <tr>
+                    <td style="width: 5%; text-align: left; vertical-align: middle;">
+                        <br />
+                    </td>
+                    <td style="width: 28%; text-align: left; vertical-align: middle;"><span style="font-family: Arial;">
+            <span style="font-size: 36px; color: #ffc000;">Estimate</span>
+                        <br />
+                        <span style="color: #000000;"><strong>_CustomerInfo_</strong><br />
+            </span>
+                        </span>
+                    </td>
+                    <td style="width: 33%; text-align: center;"><span style="font-family: Arial; font-size: 16px;"> <strong>_MyCompanyLogo_ </strong></span></td>
+                    <td style="width: 28%; text-align: right; vertical-align: middle;" class="my_company_logo"><span style="font-family: Arial; font-size: 16px;"><strong></strong>
+            <span style="color: #000000;"><strong><br />
+            <span style="font-size: 14px; text-decoration: underline;">Service Site</span></strong><span style="font-size: 14px;"><br />
+            </span> ​
+                        <span style="font-size: 13px;"><strong>_ServiceLocationName_<br />
+            ​_ServiceLocationAddress_</strong></span></span>
+                        </span>
+                    </td>
+                    <td style="width: 5%; text-align: left; vertical-align: middle;">
+                        <br />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div style="padding: 15px; background-color: #f1f1f2;">
+            <table width="1163" height="20" class="section">
+                <tbody>
+                    <tr>
+                        <td style="width: 5%;">
+                            <br />
+                        </td>
+                        <td id="item" style="width: 90%;"><span style="font-family: Arial;"><strong><span style="font-size: 18px;">Estimate No. _EstimateID_</span></strong> Issued on _EstimateDate_</span>
+                        </td>
+                        <td style="width: 5%;">
+                            <br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 5%;">
+                            <br />
+                        </td>
+                        <td id="item" style="width: 90%;"><span style="font-size: 12px; font-family: Arial;">_Estimate.Items_</span></td>
+                        <td style="width: 5%;">
+                            <br />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table width="1163" height="29" class="section">
+                <tbody>
+                    <tr>
+                        <td style="width: 5%;">
+                            <br />
+                        </td>
+                        <td style="width: 55%; border-bottom: 1px solid #000000;">
+                            <br />
+                        </td>
+                        <td style="width: 17%; border-bottom: 1px solid #000000; text-align: right;"><span style="font-size: 14px; font-family: Arial;"><strong>Sub Total</strong><br />
+            </span></td>
+                        <td style="width: 18%; border-bottom: 1px solid #000000; text-align: right;"><span style="font-size: 14px; font-family: Arial;"><strong> _Estimate.Subtotal_</strong><br />
+            </span></td>
+                        <td style="width: 5%;">
+                            <br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 5%;">
+                            <br />
+                        </td>
+                        <td style="width: 55%; vertical-align: top;">
+                            <br />
+                        </td>
+                        <td style="width: 17%; vertical-align: top; text-align: right;"><span style="font-size: 14px; font-family: Arial;">HST </span></td>
+                        <td style="width: 18%; vertical-align: top; text-align: right;"><span style="font-size: 14px; font-family: Arial;">_Estimate.tax_</span></td>
+                        <td style="width: 5%;">
+                            <br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 5%;">
+                            <br />
+                        </td>
+                        <td style="width: 55%; vertical-align: top;">
+                            <br />
+                        </td>
+                        <td style="width: 17%; vertical-align: top; text-align: right;"><span style="font-size: 14px; font-family: Arial;">Total</span></td>
+                        <td style="width: 18%; vertical-align: top; text-align: right;"><span style="font-size: 14px; font-family: Arial;">_Estimate.total_</span></td>
+                        <td style="width: 5%;">
+                            <br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 5%;">&nbsp;</td>
+                        <td style="width: 55%; vertical-align: top;">&nbsp;</td>
+                        <td style="width: 17%; vertical-align: top; text-align: right;"><strong><span style="font-family: Arial;">Deposit</span></strong>&nbsp;</td>
+                        <td style="width: 18%; vertical-align: top; text-align: right;"><strong><span style="font-family: Arial;">_Estimate.DepositDue_</span></strong>&nbsp;</td>
+                        <td style="width: 5%;">&nbsp;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <table width="1193" height="1" class="section">
+            <tbody>
+                <tr>
+                    <td style="width: 5%;"><strong> </strong>
+                        <br />
+                    </td>
+                    <td style="width: 90%; border-bottom: 1px solid #000000; padding-bottom: 5px; text-align: left; vertical-align: bottom;"><strong></strong>
+                        <p style="text-align: center;"><span style="font-size: 12px; font-family: Arial;"> <strong>_MyCompanyName_</strong> | _MyCompanyAddress_ | _MyCompanyPhone_ | _MyCompanyWebsite_</span></p>
+                    </td>
+                    <td style="width: 5%;">
+                        <br />
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 5%;">
+                        <br />
+                    </td>
+                    <td style="width: 90%; border-bottom: 1px solid #000000; padding-bottom: 5px; vertical-align: bottom; text-align: left;"><span style="font-family: Arial;">
+            <span style="font-size: 20px;"> THANK YOU </span><span style="color: #ffc000;"><span style="font-size: 12px; color: #000000;"><strong>for considering </strong></span><span style="font-size: 12px; color: #000000;"><strong>_MyCompanyName_</strong></span></span>
+                        </span>
+                    </td>
+                    <td style="width: 5%;">
+                        <br />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table width="1193" height="3" class="section">
+            <tbody>
+                <tr>
+                    <td style="width: 5%;">
+                        <br />
+                    </td>
+                    <td style="width: 35%; vertical-align: top;"><span style="font-size: 12px; font-family: Arial;">
+            <span style="color: #000000;"><strong>QUESTIONS? CONTACT US</strong></span>
+                        <br /> _MyCompanyEmail_
+                        <br /> _MyCompanyPhone_
+                        <br />
+                        <br />
+                        </span>
+                    </td>
+                    <td style="width: 55%; vertical-align: top;"><span style="font-size: 12px; font-family: Arial;">
+            <span style="color: #000000;"><strong>TERMS &amp; CONDITIONS</strong></span>
+                        <br /> We accept payment by cheque, cash and credit. Please send cheques to our main address or call with credit card info.
+                        <br />
+                        </span>
+                        <table width="653" height="26" class="section">
+                            <tbody>
+                                <tr>
+                                    <td><span style="font-size: 12px; font-family: Arial;">
+                        <strong>NOTES:</strong>
+                        _EstimateNotes_</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td style="width: 5%;">
+                        <br />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- End of Silex HEAD tag do not remove -->
+</head>
+
+<body data-silex-id="body-initial" class="body-initial silex-runtime" data-silex-type="container" style="">
+    <div class="silex-pages">
+        <div data-silex-type="image" class="editable-style silex-id-hamburger-menu image-element menu-button prevent-draggable prevent-resizable" data-silex-id="silex-id-hamburger-menu">
+            <img alt="open mobile menu" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAoCAYAAAC8cqlMAAAB5UlEQVR42u2ZPWvCUBSGM+UfFO3e3dLu/QN+oKj4EUXRQREEJYgoiCAu6qCogyDo7iJ21UUaKqEgCC4iiEMGB3UVgsnpTWj/wfVK2nvhGbKEPJyT996TMMzPGg6H5mKx+GgkyuWyeTQasb8OTDwef4tEIp8+n+/LYIjJZJJHQiwzm81M6OLDarWqNpsNjEYgEJCy2ewT0+/3TagighElNFAnQT6ft1ARKkJFqMgfFvF4PFpuEwFtdrcRqVarIIoirFYrIiyXSxiPx+B2u/GJBINBuF6vQHopigK1Wg2fCMdxcLlciIuoqgqNRgOfiN1uB3Qwg91uB8fjkQiHwwEmkwne1qLxS0VuKKJle71eh06nQ4Rmswk8z+MVcTqdsNlsQJZlotF7Pp8hk8ngE4lGo/qN7xG/vV4Pb0Xm8zlxkdPpBGgMx/+yJxIJKBQKRMjlcuBwOGhq/Q+RcDgMsViMCFrAuFwu/CKDwQC22y1IkkSE/X4PgiDo+xc2Ea0S9zjGa/Hb7Xbxifj9fj0K7yFSqVTwtlY6nYbpdKpPiSRYLBbQarX0PYymFhWhIlSEilCRW6GdyUqlkoVZr9dsKpXiOY6TtW+7BkNBz/7ebrcf9L+6Xq+XRYPMMyrTq5EIhUIvaAjTJb4BBNQ2yhnth0wAAAAASUVORK5CYII="
+            class="silex-element-content">
+        </div>
+
+        <a id="page-page-1" data-silex-type="page" class="page-element page-link-active">Page 1</a></div>
+    <div data-silex-type="container" class="prevent-draggable container-element editable-style silex-id-1474394621033-3 section-element" data-silex-id="silex-id-1474394621033-3">
+        <div data-silex-type="container" class="editable-style silex-element-content default-site-width silex-id-1474394621032-2 silex-container-content container-element prevent-draggable" data-silex-id="silex-id-1474394621032-2"></div>
+    </div>
+    <div data-silex-type="container" class="prevent-draggable container-element editable-style silex-id-1474394605264-1 section-element" data-silex-id="silex-id-1474394605264-1">
+        <div data-silex-type="container" class="editable-style silex-element-content default-site-width silex-id-1474394605263-0 silex-container-content container-element prevent-draggable" data-silex-id="silex-id-1474394605263-0">
+            <div data-silex-id="silex-id-1442914737143-3" class="editable-style silex-id-1442914737143-3 text-element" data-silex-type="text">
+                <div class="silex-element-content normal">
+                    <div style="text-align: center;"><span style="color: rgb(255, 255, 255);"><a href="//www.silex.me">Powered by Silex</a></span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+</body>
+
+</html>
