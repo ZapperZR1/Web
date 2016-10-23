@@ -1,0 +1,347 @@
+<style type="text/css">
+    body
+    {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    }
+    .print_page_container
+    {
+    font-size: 13px;
+    width: 100%;
+    font-family: Candara,Calibri,Segoe,Segoe UI,Optima,Arial,sans-serif;
+    text-align: left;
+    }
+    .section
+    {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 0 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+    /*page-break-inside: avoid;*/
+    }
+    .leftbox, .rightbox
+    {
+    width: 48%;
+    background-color: #F3F3F3;
+    }
+    .middlebox
+    {
+    width: 4%;
+    }
+    .customer_section, .contact_section
+    {
+    width: 100%;
+    border: 0px solid #CCCCCC;
+    border-collapse: collapse;
+    border-spacing: 0;
+    }
+    .print_heading, .ticket_heading, .mycompany_heading
+    {
+    text-align: left;
+    font-weight: bold;
+    color: #000000;
+    background-color: #CCCCCC;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-bottom: 0px;
+    border-top: 1px solid #CCCCCC;
+    border-left: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+    padding: 3px 3px;
+    }
+    .customer_body
+    {
+    padding: 3px 3px;
+    }
+    .amountdue_section
+    {
+    text-align: right;
+    border: 2px solid #CCCCCC;
+    border-collapse: collapse;
+    border-spacing: 0;
+    }
+    .ticket_section, .item_section, .asset_section, .appointment_section
+    {
+    width: 100%;
+    text-align: left;
+    border: 0px solid #CCCCCC;
+    border-collapse: collapse;
+    border-spacing: 0;
+    }
+    .customer_label
+    {
+    display:none;
+    text-align: left;
+    font-weight: bold;
+    color: #000000;
+    background-color: #FFFFFF;
+    vertical-align: top;
+    white-space: nowrap;
+    }
+    .ticket_label, .ticket_label2, .wolabel, .amountdue_label, .asset_label
+    {
+    text-align: left;
+    vertical-align: top;
+    font-weight: bold;
+    color: #000000;
+    background-color: #FFFFFF;
+    white-space: nowrap;
+    border: 1px solid #CCCCCC;
+    border-collapse: collapse;
+    border-spacing: 0;
+    padding: 2px 2px;
+    }
+    .ticket_text, .ticket_text2, .wotext, .wotext_number, .amountdue_text, .asset_text
+    {
+    text-align: left;
+    vertical-align: top;
+    color: #000000;
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-collapse: collapse;
+    border-spacing: 0;
+    padding: 2px 2px;
+    }
+    .ticket_label, .ticket_label2
+    {
+    width: 10%;
+    }
+    .ticket_text, .ticket_text2
+    {
+    width: 40%;
+    }
+    .customer_label
+    {
+    width: 10%;
+    margin-left: 10px;
+    }
+    .customer_text
+    {
+    width: 40%;
+    }
+    .asset_label
+    {
+    width: 20%;
+    }
+    .asset_text
+    {
+    width: 80%;
+    }
+    .wotext_number
+    {
+    text-align: right;
+    white-space: nowrap;
+    }
+    .wotext, .wotext_number
+    {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 3px;
+    padding-right: 3px;
+    }
+    .my_company_info
+    {
+    font-weight: bold;
+    color: #000000;
+    background-color: #FFFFFF;
+    }
+    .customer_section, .customer_label, .customer_text, .contact_section, .wolabel
+    {
+    text-align: left;
+    background-color: #F3F3F3;
+    }
+    .amountdue_label
+    {
+    text-align: right;
+    }
+    .ticket_info
+    {
+    font-family: "Arial Rounded MT Bold";
+    color: #DDDDDD;
+    text-align: center;
+    }
+    .largeHeader
+    {
+    }
+    .subtotal_label
+    {
+    font-family: Arial;
+    font-weight: bold;
+    text-align: right;
+    white-space: nowrap;
+    }
+    .subtotal_text
+    {
+    border-bottom: solid 1px #999999;
+    text-align: right;
+    }
+    .signature
+    {
+    width: 216px;
+    page-break-inside: avoid;
+    }
+    .my_company_logo img
+    {
+    height: auto;
+    width: auto;
+    }
+    #item td{
+    border: none;
+    background-color: #f1f1f2;
+    }
+    #item tr:first-child td{
+    background-color: #f1f1f2;
+    border:none;
+    border-bottom: 1px solid #000000;
+    }
+    .grey{
+    }
+    .item_approved {display: none;}
+    .item_tax {display: none;}
+    .item_name {display: none;}
+</style>
+<div class="print_page_container">
+<table width="1193" height="39" class="section">
+    <tbody>
+        <tr>
+            <td style="width: 5%; text-align: left; vertical-align: middle;">
+            <br />
+            </td>
+            <td style="width: 28%; text-align: left; vertical-align: middle;"><span style="font-family: Arial;">
+            <span style="font-size: 36px; color: #ffc000;">Estimate</span><br />
+            <span style="color: #000000;"><strong>_CustomerInfo_</strong><br />
+            </span>
+            </span></td>
+            <td style="width: 33%; text-align: center;"><span style="font-family: Arial; font-size: 16px;"> <strong>_MyCompanyLogo_ </strong></span></td>
+            <td style="width: 28%; text-align: right; vertical-align: middle;" class="my_company_logo"><span style="font-family: Arial; font-size: 16px;"><strong></strong>
+            <span style="color: #000000;"><strong><br />
+            <span style="font-size: 14px; text-decoration: underline;">Service Site</span></strong><span style="font-size: 14px;"><br />
+            </span>
+            ​<span style="font-size: 13px;"><strong>_ServiceLocationName_<br />
+            ​_ServiceLocationAddress_</strong></span></span> </span></td>
+            <td style="width: 5%; text-align: left; vertical-align: middle;">
+            <br />
+            </td>
+        </tr>
+    </tbody>
+</table>
+<div style="padding: 15px; background-color: #f1f1f2;">
+<table width="1163" height="20" class="section">
+    <tbody>
+        <tr>
+            <td style="width: 5%;"><br />
+            </td>
+            <td id="item" style="width: 90%;"><span style="font-family: Arial;"><strong><span style="font-size: 18px;">Estimate No. _EstimateID_</span></strong> Issued on _EstimateDate_</span></td>
+            <td style="width: 5%;"> <br />
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 5%;"> <br />
+            </td>
+            <td id="item" style="width: 90%;"><span style="font-size: 12px; font-family: Arial;">_Estimate.Items_</span></td>
+            <td style="width: 5%;"> <br />
+            </td>
+        </tr>
+    </tbody>
+</table>
+<table width="1163" height="29" class="section">
+    <tbody>
+        <tr>
+            <td style="width: 5%;"><br />
+            </td>
+            <td style="width: 55%; border-bottom: 1px solid #000000;"> <br />
+            </td>
+            <td style="width: 17%; border-bottom: 1px solid #000000; text-align: right;"><span style="font-size: 14px; font-family: Arial;"><strong>Sub Total</strong><br />
+            </span></td>
+            <td style="width: 18%; border-bottom: 1px solid #000000; text-align: right;"><span style="font-size: 14px; font-family: Arial;"><strong> _Estimate.Subtotal_</strong><br />
+            </span></td>
+            <td style="width: 5%;"> <br />
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 5%;"> <br />
+            </td>
+            <td style="width: 55%; vertical-align: top;"> <br />
+            </td>
+            <td style="width: 17%; vertical-align: top; text-align: right;"><span style="font-size: 14px; font-family: Arial;">HST </span></td>
+            <td style="width: 18%; vertical-align: top; text-align: right;"><span style="font-size: 14px; font-family: Arial;">_Estimate.tax_</span></td>
+            <td style="width: 5%;"> <br />
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 5%;"> <br />
+            </td>
+            <td style="width: 55%; vertical-align: top;"> <br />
+            </td>
+            <td style="width: 17%; vertical-align: top; text-align: right;"><span style="font-size: 14px; font-family: Arial;">Total</span></td>
+            <td style="width: 18%; vertical-align: top; text-align: right;"><span style="font-size: 14px; font-family: Arial;">_Estimate.total_</span></td>
+            <td style="width: 5%;"> <br />
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 5%;">&nbsp;</td>
+            <td style="width: 55%; vertical-align: top;">&nbsp;</td>
+            <td style="width: 17%; vertical-align: top; text-align: right;"><strong><span style="font-family: Arial;">Deposit</span></strong>&nbsp;</td>
+            <td style="width: 18%; vertical-align: top; text-align: right;"><strong><span style="font-family: Arial;">_Estimate.DepositDue_</span></strong>&nbsp;</td>
+            <td style="width: 5%;">&nbsp;</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<table width="1193" height="1" class="section">
+    <tbody>
+        <tr>
+            <td style="width: 5%;"><strong> </strong> <br />
+            </td>
+            <td style="width: 90%; border-bottom: 1px solid #000000; padding-bottom: 5px; text-align: left; vertical-align: bottom;"><strong></strong>
+            <p style="text-align: center;"><span style="font-size: 12px; font-family: Arial;"> <strong>_MyCompanyName_</strong> | _MyCompanyAddress_ | _MyCompanyPhone_ | _MyCompanyWebsite_</span></p>
+            </td>
+            <td style="width: 5%;"> <br />
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 5%;"> <br />
+            </td>
+            <td style="width: 90%; border-bottom: 1px solid #000000; padding-bottom: 5px; vertical-align: bottom; text-align: left;"><span style="font-family: Arial;">
+            <span style="font-size: 20px;"> THANK YOU </span><span style="color: #ffc000;"><span style="font-size: 12px; color: #000000;"><strong>for considering </strong></span><span style="font-size: 12px; color: #000000;"><strong>_MyCompanyName_</strong></span></span></span></td>
+            <td style="width: 5%;"><br />
+            </td>
+        </tr>
+    </tbody>
+</table>
+<table width="1193" height="3" class="section">
+    <tbody>
+        <tr>
+            <td style="width: 5%;"><br />
+            </td>
+            <td style="width: 35%; vertical-align: top;"><span style="font-size: 12px; font-family: Arial;">
+            <span style="color: #000000;"><strong>QUESTIONS? CONTACT US</strong></span>
+            <br />
+            _MyCompanyEmail_ <br />
+            _MyCompanyPhone_
+            <br />
+            <br />
+            </span></td>
+            <td style="width: 55%; vertical-align: top;"><span style="font-size: 12px; font-family: Arial;">
+            <span style="color: #000000;"><strong>TERMS &amp; CONDITIONS</strong></span>
+            <br />
+            We accept payment by cheque, cash and credit. Please send cheques to our main address or call with credit card info.
+            <br />
+            </span>
+            <table width="653" height="26" class="section">
+                <tbody>
+                    <tr>
+                        <td><span style="font-size: 12px; font-family: Arial;">
+                        <strong>NOTES:</strong>
+                        _EstimateNotes_</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            </td>
+            <td style="width: 5%;"> <br />
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
